@@ -1,0 +1,291 @@
+.hamburger-menu {
+    cursor: pointer;
+    transition: .6s;
+    transition: all .5s ease-in-out;
+    padding-right: 15px;
+}
+
+.line {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+
+.line::before,
+.line::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    box-shadow: 0 5px 2px -2px black;
+    transition: all .5s ease-in-out;
+}
+
+.line::before {
+    transform: translateY(6px);
+}
+
+.line::after {
+    transform: translateY(-6px);
+}
+
+.hamburger-menu:hover {
+    transform: translateY(-25%);
+}
+
+.hamburger-menu:hover .line:before {
+    box-shadow: 0 5px 10px 1px black;
+}
+
+
+.hamburger-menu.open .line {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.hamburger-menu.open .line::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger-menu.open .line::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+#site-header {
+    padding: 0px;
+}
+
+#site-header::before {
+    display: none;
+}
+
+.list-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    width: 120%;
+    margin: 0px -21.25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    padding-left: 20px;
+}
+
+.dropdown-item h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dropdown span {
+    display: none;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 21.2px;
+    top: 100%;
+    left: 0px;
+    background-color: rgb(142, 101, 192);
+    display: none;
+}
+
+.wrapper.open {
+    display: block;
+}
+
+.nav-list,
+.account {
+    width: 100%;
+}
+
+.list {
+    width: 100%;
+    flex-direction: column;
+}
+
+.list-item {
+    width: 100%;
+}
+
+.list-item a {
+    padding: 14.1px 0px;
+}
+
+.list-item i {
+    top: 18.8px;
+    font-size: 13px;
+}
+
+.account-menu {
+    flex-direction: column;
+    width: 100%;
+}
+
+.account-item {
+    width: 100%;
+}
+
+.account-menu .log-in {
+    padding: 0px;
+}
+
+.log-in a {
+    padding: 14.1px 0px;
+}
+
+.theme {
+    width: 100%;
+    margin-top: 37.8px;
+    text-align: center;
+}
+
+.theme a {
+    width: 100%;
+    padding: 6.7px 0px;
+}
+
+.theme:hover {
+    background-color: white;
+    transition: 0.3s;
+    transform: scale(1.04);
+}
+
+.theme:hover a {
+    color: black;
+}
+
+.home-content {
+    position: relative;
+    max-width: 100%;
+}
+
+#home {
+    padding: 0px;
+}
+
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.home-grid-content {
+    position: relative;
+    text-align: center;
+    background-color: rgba(142, 101, 192);
+}
+
+.home-grid-intro {
+    width: 100%;
+    text-align: center;
+}
+
+.grid-intro-text {
+    padding-top: 60px;
+    width: 100%;
+}
+
+.home-grid-products-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#video-section {
+    padding: 0px 0px;
+}
+
+.video-section-container {
+    width: 100%;
+}
+
+.products-wrapper {
+    min-width: 33%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.home-grid-products {
+    background-color: rgba(142, 101, 192);
+    padding-bottom: 20px;
+}
+
+.section-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-video {
+    flex-basis: auto;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.video-content {
+    margin-left: 0px;
+    width: 100%;
+}
+
+.video-command {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    border-radius: 0px;
+    padding: 0px;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+}
+
+.command-avatar {
+    margin: 0px;
+}
+
+.big-header {
+    font-size: 40px;
+    line-height: 1.4;
+}
+.avatar-wrapper {
+    position: relative;
+    width: 100px;
+}
+
+.avatar-wrapper img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.command-paragraph::before {
+    display: none;
+}
+
+.footer-list-item {
+    font-size: 16px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+@media screen {
+    .footer-list {
+        flex-direction: column;
+    }
+}

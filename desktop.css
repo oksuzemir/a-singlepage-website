@@ -1,0 +1,183 @@
+.dropdown {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    top: 37px;
+    min-width: 231px;
+    padding: 12px 0px;
+    border-radius: 4px;
+    transition: all .9s ease;
+}
+
+.item-4 .item-paragraph:hover+.dropdown{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.dropdown:hover{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.dropdown .dropdown-item {
+    position: relative;
+    padding: .7em;
+}
+
+.dropdown .dropdown-item:hover {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.dropdown .dropdown-item .dropdown-header {
+    display: inline-block;
+    color: black;
+    margin-bottom: 5px;
+    font-size: 20.5px;
+    font-weight: 600;
+}
+
+.dropdown .dropdown-item .dropdown-span {
+    display: block;
+    color: #665c73;
+    font-size: 13.8px;
+    font-weight: 400;
+    font-weight: normal;
+}
+
+
+.account-menu .theme:hover {
+    background-color: white;
+    border: none;
+    transform: scaleY(1.08);
+    box-shadow: 0 5px 2px -2px var(--text-color-nav);
+    transform: translateY(-10%);
+}
+
+.account-menu .theme:hover a {
+    color: var(--text-color-body);
+}
+
+.account-menu .theme a {
+    padding: 0px 14px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.theme:hover a {
+    display: inline-block;
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.dropdown-item>a>.dropdown-header::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.dropdown-item:hover a>.dropdown-header::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+.list-item>a::after {
+    position: absolute;
+    bottom: -6px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fac919;
+    ;
+    transition: width .3s;
+}
+
+.list-item>a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.list-item>a::after {
+    position: absolute;
+    bottom: -6px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fac919;
+    ;
+    transition: width .3s;
+}
+
+.list-item>a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.account-menu .log-in>a::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fac919;
+    ;
+    transition: width .3s;
+}
+
+.account-menu .log-in>a:hover::after {
+    width: 16%;
+    transition: width .3s;
+}
